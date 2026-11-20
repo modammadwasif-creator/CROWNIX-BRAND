@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop All Products | CROWNIX</title>
+
+    <meta name="description"
+        content="Explore premium men's watches, ladies watches, couple watches, caps and gadgets at CROWNIX.">
+
+    <link rel="icon" href="Screenshot 2026-11-19 183414">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .shop-page {
+            max-width: 1250px;
+            margin: 45px auto;
+            padding: 0 20px;
+        }
+
+        .shop-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .shop-heading h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+            color: var(--gold, #d8b36a);
+        }
+
+        .shop-heading p {
+            color: #aaa;
+        }
+
+        .review-link-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            max-width: 650px;
+            margin: 0 auto 35px;
+            padding: 18px 22px;
+            background: linear-gradient(135deg, #1b1b1b, #111);
+            border: 1px solid var(--gold, #d8b36a);
+            border-radius: 12px;
+            text-decoration: none;
+            transition: .3s ease;
+        }
+
+        .review-link-box:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(216, 179, 106, .12);
+        }
+
+        .review-box-icon {
+            font-size: 27px;
+        }
+
+        .review-box-content {
+            flex: 1;
+        }
+
+        .review-box-content h3 {
+            color: var(--gold, #d8b36a);
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .review-box-content p {
+            color: #aaa;
+            font-size: 12px;
+        }
+
+        .review-box-arrow {
+            color: var(--gold, #d8b36a);
+            font-size: 23px;
+        }
+
+        .shop-toolbar {
+            display: grid;
+            grid-template-columns: 1fr 220px 220px;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .shop-toolbar input,
+        .shop-toolbar select {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid #39312a;
+            border-radius: 7px;
+            background: #171717;
+            color: #f5f5f5;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .shop-toolbar input::placeholder {
+            color: #888;
+        }
+
+        .shop-toolbar input:focus,
+        .shop-toolbar select:focus {
+            border-color: var(--gold, #d8b36a);
+        }
+
+        .shop-toolbar select option {
+            background: #171717;
+            color: white;
+        }
+
+        .shop-result-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 22px;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .shop-result-info strong {
+            color: var(--gold, #d8b36a);
+        }
+
+        #shopProducts {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .shop-empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 15px;
+            border: 1px dashed #59472b;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .shop-empty h3 {
+            margin-bottom: 10px;
+            color: var(--gold, #d8b36a);
+        }
+
+        .shop-empty p {
+            color: #aaa;
+        }
+
+        .shop-empty a {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--gold, #d8b36a);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .shop-bottom {
+            text-align: center;
+            margin-top: 45px;
+        }
+
+        .shop-bottom a {
+            color: var(--gold, #d8b36a);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .shop-admin-tools {
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        #adminImageFilterButton {
+            background: #171717;
+            color: var(--gold, #d8b36a);
+            border: 1px solid var(--gold, #d8b36a);
+            padding: 9px 13px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #adminImageFilterButton:hover {
+            background: var(--gold, #d8b36a);
+            color: #111;
+        }
+
+        .admin-image-filter-panel {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            background: #171717;
+            border: 1px solid #59472b;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .admin-image-filter-panel[hidden] {
+            display: none;
+        }
+
+        .admin-image-filter-panel h3 {
+            width: 100%;
+            color: var(--gold, #d8b36a);
+            font-size: 14px;
+        }
+
+        .admin-image-filter-panel input {
+            min-width: 180px;
+            padding: 10px;
+            border: 1px solid #59472b;
+            border-radius: 6px;
+            background: #101010;
+            color: white;
+            outline: none;
+        }
+
+        .admin-image-filter-panel button {
+            padding: 10px 15px;
+            background: var(--gold, #d8b36a);
+            color: #111;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        #adminImageResult {
+            width: 100%;
+        }
+
+        .review-screenshot {
+            display: block;
+            width: 100%;
+            max-width: 280px;
+            height: 180px;
+            object-fit: contain;
+            background: #181818;
+            border: 1px solid var(--gold, #d8b36a);
+            border-radius: 12px;
+            padding: 5px;
+            margin: 15px auto;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+
+        .review-screenshot:hover {
+            transform: scale(1.03);
+            box-shadow: 0 5px 18px rgba(216, 179, 106, .2);
+        }
+
+        @media (max-width: 1000px) {
+            #shopProducts {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+
+            .shop-toolbar {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .shop-toolbar input {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 700px) {
+            #shopProducts {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 14px;
+            }
+
+            .shop-heading h1 {
+                font-size: 28px;
+            }
+
+            .shop-toolbar {
+                grid-template-columns: 1fr;
+            }
+
+            .shop-toolbar input {
+                grid-column: auto;
+            }
+
+            .shop-result-info {
+                font-size: 12px;
+            }
+
+            .review-link-box {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            #shopProducts {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a href="index.html" class="brand">
+                <img
+                    src="Screenshot 2026-11-19 183414"
+                    alt="CROWNIX Logo"
+                    class="brand-logo"
+                >
+            </a>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html">Home</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="shop.html?category=Men%20Watches">Men Watches</a>
+                <a href="shop.html?category=Ladies%20Watches">Ladies Watches</a>
+                <a href="shop.html?category=Caps">Caps</a>
+                <a href="shop.html?category=Gadgets">Gadgets</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+
+                <a href="cart.html" class="cart-button">
+                    <span>🛍️</span>
+                    <span>Cart</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- SHOP PAGE -->
+
+    <main class="shop-page">
+
+        <section class="shop-heading">
+
+            <h1>Explore Our Collection</h1>
+
+            <p>
+                Discover premium collections at CROWNIX.
+                Redefining Luxury. Elevate Your Style.
+            </p>
+
+        </section>
+
+        <!-- CUSTOMER REVIEWS -->
+
+        <a href="reviews.html" class="review-link-box">
+
+            <div class="review-box-icon">⭐</div>
+
+            <div class="review-box-content">
+                <h3>Customer Reviews</h3>
+                <p>See what our customers say about CROWNIX.</p>
+            </div>
+
+            <span class="review-box-arrow">→</span>
+
+        </a>
+
+        <!-- SEARCH AND FILTERS -->
+
+        <section class="shop-toolbar">
+
+            <input
+                type="search"
+                id="shopSearch"
+                placeholder="Search products..."
+                aria-label="Search products"
+            >
+
+            <select
+                id="categoryFilter"
+                aria-label="Filter by category"
+            >
+
+                <option value="all">All Categories</option>
+                <option value="Men Watches">Men Watches</option>
+                <option value="Ladies Watches">Ladies Watches</option>
+                <option value="Couple Watches">Couple Watches</option>
+                <option value="Caps">Caps</option>
+                <option value="Gadgets">Gadgets</option>
+
+            </select>
+
+            <select
+                id="sortFilter"
+                aria-label="Sort products"
+            >
+
+                <option value="default">Default Sorting</option>
+                <option value="low-high">Price: Low to High</option>
+                <option value="high-low">Price: High to Low</option>
+                <option value="name">Name: A to Z</option>
+
+            </select>
+
+        </section>
+
+        <!-- ADMIN IMAGE FILTER -->
+
+        <section class="shop-admin-tools">
+
+            <button
+                type="button"
+                id="adminImageFilterButton"
+                aria-label="Admin Settings"
+                title="Admin Settings"
+            >
+                ⚙⚙⚙
+            </button>
+
+            <div
+                id="adminImageFilterPanel"
+                class="admin-image-filter-panel"
+                hidden
+            >
+
+                <h3>Admin Image Filter</h3>
+
+                <input
+                    type="text"
+                    id="pictureIdInput"
+                    placeholder="Enter Picture ID"
+                    autocomplete="off"
+                >
+
+                <button type="button" id="pictureIdFindButton">
+                    Find Image
+                </button>
+
+            </div>
+
+            <div id="adminImageResult"></div>
+
+        </section>
+
+        <!-- RESULT COUNT -->
+
+        <div class="shop-result-info">
+
+            <p>
+                Products:
+                <strong id="resultCount">0</strong>
+            </p>
+
+            <p>CROWNIX Collection</p>
+
+        </div>
+
+        <!-- PRODUCTS -->
+
+        <section id="shopProducts">
+
+            <div class="shop-empty">
+
+                <h3>Loading Products...</h3>
+
+                <p>Please wait.</p>
+
+            </div>
+
+        </section>
+
+        <div class="shop-bottom">
+
+            <a href="index.html">
+                ← Back to Home
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <h2>CROWNIX</h2>
+
+                <p>
+                    Redefining Luxury. Elevate Your Style.
+                    Discover premium watches, caps and gadgets.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="cart.html">Shopping Cart</a>
+                <a href="reviews.html">Customer Reviews</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+            <div class="footer-contact">
+
+                <h3>Contact Us</h3>
+
+                <p>
+                    WhatsApp:
+                    <a
+                        href="https://wa.me/923322100970"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        03322100970
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>© 2026 CROWNIX. All Rights Reserved.</p>
+            <p>REDEFINING LUXURY • ELEVATE YOUR STYLE</p>
+
+        </div>
+
+    </footer>
+
+    <!-- BACK TO TOP -->
+
+    <button
+        id="backToTop"
+        class="back-to-top"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="products-data.js"></script>
+    <script src="shop.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

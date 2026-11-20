@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CROWNIX | Premium Luxury Store</title>
+
+    <meta name="description"
+        content="Discover premium men's watches, ladies watches, stylish caps and quality gadgets at CROWNIX. Redefining Luxury.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="Screenshot 2026-11-19 183414" type="image/png">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a href="index.html" class="brand">
+                <img
+                    src="Screenshot 2026-11-19 183414"
+                    alt="CROWNIX Logo"
+                    class="brand-logo"
+                >
+            </a>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html" class="active">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="shop.html?category=Men Watches">Men Watches</a>
+                <a href="shop.html?category=Ladies Watches">Ladies Watches</a>
+                <a href="shop.html?category=Caps">Caps</a>
+                <a href="shop.html?category=Gadgets">Gadgets</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+
+                <a href="cart.html" class="cart-button">
+                    <span>🛍️</span>
+                    <span>Cart</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <main>
+
+        <section class="hero-section">
+
+            <div class="hero-content">
+
+                <span class="hero-tag">WELCOME TO CROWNIX</span>
+
+                <h1>
+                    Redefining Luxury.
+                    <span>Elevate Your Style.</span>
+                </h1>
+
+                <p>
+                    Discover premium watches, stylish caps and
+                    quality gadgets. Experience luxury, style
+                    and quality with CROWNIX.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="shop.html" class="btn btn-primary">
+                        Explore Collection
+                    </a>
+
+                    <a href="contact.html" class="btn btn-outline">
+                        Contact Us
+                    </a>
+
+                </div>
+
+                <div class="hero-features">
+                    <span>✓ Premium Collection</span>
+                    <span>✓ Cash on Delivery</span>
+                    <span>✓ Easy WhatsApp Orders</span>
+                </div>
+
+            </div>
+
+
+            <div class="hero-decoration">
+
+                <div class="hero-circle">
+
+                    <span>CROWNIX</span>
+
+                    <strong>LUXURY</strong>
+
+                    <small>REDEFINING LUXURY</small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CATEGORIES -->
+        <section class="categories-section">
+
+            <div class="section-heading">
+
+                <span class="section-tag">EXPLORE OUR COLLECTION</span>
+
+                <h2>Shop By Category</h2>
+
+                <p>Discover your style. Choose your collection.</p>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <a href="shop.html?category=Men Watches" class="category-card">
+
+                    <span class="category-icon">⌚</span>
+
+                    <h3>Men Watches</h3>
+
+                    <span>Explore Collection →</span>
+
+                </a>
+
+
+                <a href="shop.html?category=Ladies Watches" class="category-card">
+
+                    <span class="category-icon">💎</span>
+
+                    <h3>Ladies Watches</h3>
+
+                    <span>Explore Collection →</span>
+
+                </a>
+
+
+                <a href="shop.html?category=Caps" class="category-card">
+
+                    <span class="category-icon">🧢</span>
+
+                    <h3>Caps</h3>
+
+                    <span>Explore Collection →</span>
+
+                </a>
+
+
+                <a href="shop.html?category=Gadgets" class="category-card">
+
+                    <span class="category-icon">🎧</span>
+
+                    <h3>Gadgets</h3>
+
+                    <span>Explore Collection →</span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- CUSTOMER REVIEWS BOX -->
+        <a href="reviews.html" class="review-link-box">
+
+            <div class="review-box-icon">⭐</div>
+
+            <div class="review-box-content">
+
+                <h3>Customer Reviews</h3>
+
+                <p>See what our customers say about CROWNIX.</p>
+
+            </div>
+
+            <span class="review-box-arrow">→</span>
+
+        </a>
+
+
+        <!-- FEATURED PRODUCTS -->
+        <section class="featured-section">
+
+            <div class="section-heading">
+
+                <span class="section-tag">CROWNIX COLLECTION</span>
+
+                <h2>Featured Products</h2>
+
+                <p>Explore our selected premium products.</p>
+
+            </div>
+
+
+            <div class="product-grid" id="featuredProducts">
+
+                <div class="products-loading">
+                    Loading products...
+                </div>
+
+            </div>
+
+
+            <div class="section-footer">
+
+                <a href="shop.html" class="btn btn-primary">
+                    View All Products →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- WHY CHOOSE US -->
+        <section class="benefits-section">
+
+            <div class="section-heading">
+
+                <span class="section-tag">WHY CROWNIX</span>
+
+                <h2>A Premium Shopping Experience</h2>
+
+            </div>
+
+
+            <div class="benefits-grid">
+
+
+                <div class="benefit-card">
+
+                    <span>🚚</span>
+
+                    <h3>Cash on Delivery</h3>
+
+                    <p>
+                        Pay for your order when it arrives.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit-card">
+
+                    <span>⭐</span>
+
+                    <h3>Premium Collection</h3>
+
+                    <p>
+                        Explore our carefully selected products.
+                    </p>
+
+                </div>
+
+
+                <div class="benefit-card">
+
+                    <span>💬</span>
+
+                    <h3>WhatsApp Support</h3>
+
+                    <p>
+                        Contact us easily for product information.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-brand">
+
+                <h2>CROWNIX</h2>
+
+                <p>
+                    Redefining Luxury. Discover premium watches,
+                    stylish caps and quality gadgets.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="cart.html">Shopping Cart</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>Contact Us</h3>
+
+                <p>
+                    WhatsApp:
+
+                    <a
+                        href="https://wa.me/923322100970"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        03322100970
+                    </a>
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>© 2026 CROWNIX. All Rights Reserved.</p>
+
+            <p>REDEFINING LUXURY • CROWNIX</p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BACK TO TOP -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        ↑
+    </button>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="products-data.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

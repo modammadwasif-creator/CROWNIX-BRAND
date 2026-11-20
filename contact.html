@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | CROWNIX</title>
+
+    <meta name="description"
+        content="Contact CROWNIX for premium watches, stylish caps and quality gadgets.">
+
+    <link rel="icon" href="Screenshot 2026-11-19 183414" type="image/png">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .contact-page {
+            max-width: 1100px;
+            margin: 55px auto;
+            padding: 0 20px;
+        }
+
+        .contact-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .contact-heading h1 {
+            font-size: 36px;
+            margin-bottom: 12px;
+            color: #edbd61;
+        }
+
+        .contact-heading p {
+            color: #aaa;
+            line-height: 1.7;
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .contact-card {
+            padding: 30px;
+            border: 1px solid #333;
+            border-radius: 12px;
+            background: #151515;
+            color: #fff;
+        }
+
+        .contact-card h2 {
+            font-size: 23px;
+            margin-bottom: 20px;
+            color: #edbd61;
+        }
+
+        .contact-detail {
+            padding: 18px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .contact-detail:last-child {
+            border-bottom: none;
+        }
+
+        .contact-detail h3 {
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: #edbd61;
+        }
+
+        .contact-detail p {
+            color: #ccc;
+            line-height: 1.7;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-detail a {
+            color: #d8b36a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .whatsapp-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #211b10;
+            border: 1px solid #b9852d;
+        }
+
+        .whatsapp-card h2 {
+            font-size: 27px;
+        }
+
+        .whatsapp-card p {
+            color: #ccc;
+            line-height: 1.8;
+            margin-bottom: 22px;
+        }
+
+        .whatsapp-button {
+            display: inline-block;
+            width: fit-content;
+            padding: 14px 24px;
+            border-radius: 7px;
+            background: #d8b36a;
+            color: #111;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .whatsapp-button:hover {
+            background: #edbd61;
+            transform: translateY(-2px);
+        }
+
+        .contact-bottom {
+            text-align: center;
+            margin-top: 45px;
+        }
+
+        .contact-bottom a {
+            color: #edbd61;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 750px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-heading h1 {
+                font-size: 29px;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .contact-card {
+                padding: 22px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-container">
+
+            <a href="index.html" class="brand">
+                <img
+                    src="Screenshot 2026-11-19 183414"
+                    alt="CROWNIX Logo"
+                    class="brand-logo"
+                >
+            </a>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="shop.html?category=Men Watches">Men Watches</a>
+                <a href="shop.html?category=Ladies Watches">Ladies Watches</a>
+                <a href="shop.html?category=Caps">Caps</a>
+                <a href="shop.html?category=Gadgets">Gadgets</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+
+                <a href="cart.html" class="cart-button">
+                    <span>🛍️</span>
+                    <span>Cart</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- CONTACT PAGE -->
+
+    <main class="contact-page">
+
+        <section class="contact-heading">
+
+            <h1>Get In Touch</h1>
+
+            <p>
+                Have a question about our products or your order?
+                Contact CROWNIX directly.
+            </p>
+
+        </section>
+
+
+        <section class="contact-layout">
+
+
+            <!-- BUSINESS DETAILS -->
+
+            <div class="contact-card">
+
+                <h2>Contact Information</h2>
+
+
+                <div class="contact-detail">
+
+                    <h3>Business Name</h3>
+
+                    <p>CROWNIX</p>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <h3>Contact Person</h3>
+
+                    <p>Muhammad Wasif</p>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <h3>WhatsApp Number</h3>
+
+                    <p>
+                        <a href="https://wa.me/923322100970"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            +92 332 2100970
+                        </a>
+                    </p>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <h3>Payment Method</h3>
+
+                    <p>Cash on Delivery (COD)</p>
+
+                </div>
+
+
+                <div class="contact-detail">
+
+                    <h3>Product Categories</h3>
+
+                    <p>
+                        Men Watches, Ladies Watches, Caps and Gadgets.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- WHATSAPP CONTACT -->
+
+            <div class="contact-card whatsapp-card">
+
+                <h2>Let's Talk on WhatsApp</h2>
+
+                <p>
+                    Need product details, availability information
+                    or help with your order?
+
+                    Send us a message directly on WhatsApp.
+                </p>
+
+                <a
+                    href="https://wa.me/923322100970?text=Hello%20CROWNIX%2C%20I%20need%20some%20information%20about%20your%20products."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="whatsapp-button"
+                >
+                    Chat on WhatsApp →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <div class="contact-bottom">
+
+            <a href="shop.html">
+                Explore Our Products →
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2>CROWNIX</h2>
+
+                <p>
+                    Redefining Luxury. Discover premium watches,
+                    stylish caps and quality gadgets.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="cart.html">Shopping Cart</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+
+                <p>
+                    WhatsApp:
+                    <a href="https://wa.me/923322100970"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        03322100970
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 CROWNIX. All Rights Reserved.</p>
+            <p>REDEFINING LUXURY • CROWNIX</p>
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

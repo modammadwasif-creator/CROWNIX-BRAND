@@ -3,6 +3,43 @@
 ========================================= */
 
 const VIP_PRODUCTS = [
+
+
+// CUSTOMIZED WALLET & KEYCHAIN SET
+{
+    id: "accessory-003",
+    name: "Customized Wallet Keychain Set",
+    category: "Gadgets",
+    price: 1000,
+    oldPrice: 1799,
+
+    description: `CUSTOMIZED WALLET & KEYCHAIN SET
+
+PREMIUM QUALITY
+
+PERSONALIZED DESIGN
+
+PERFECT GIFT FOR SOMEONE SPECIAL
+
+WITH PREMIUM GIFT BOX
+
+MAKING TIME: 2-4 DAYS
+
+PRICE ONLY Rs. 1,000`,
+
+    images: [
+        "Screenshot 2026-11-28 003743.png",
+        "Screenshot 2026-11-28 003708.png",
+        "Screenshot 2026-11-28 003729.png"
+    ],
+
+    badge: "Customized",
+    featured: true,
+    inStock: true
+},
+
+
+   
    
    // FANCY ELECTRIC SHOWPIECE
 {

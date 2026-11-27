@@ -2,7 +2,47 @@
    CROWNIX - PRODUCT DATABASE
 ========================================= */
 
-const VIP_PRODUCTS = [{
+const VIP_PRODUCTS = [
+   
+   // FANCY ELECTRIC SHOWPIECE
+{
+    id: "showpiece-002",
+    name: "Fancy Electric Showpiece",
+    category: "Gadgets",
+    price: 2250,
+    oldPrice: 4599,
+
+    description: `FANCY SHOWPIECE
+
+PREMIUM DECORATION PIECE
+
+OPERATED WITH ELECTRICITY
+
+PERFECT FOR HOME DECORATION
+
+PRICE ONLY Rs. 2,250 EACH
+
+DELIVERY: AVAILABLE 1 DAY AFTER ORDER CONFIRMATION`,
+
+    images: [
+        "Screenshot 2026-11-28 002812.png",
+        "Screenshot 2026-11-28 002545.png",
+        "Screenshot 2026-11-28 002557.png",
+        "Screenshot 2026-11-28 002607.png",
+        "Screenshot 2026-11-28 002703.png",
+        "Screenshot 2026-11-28 002722.png",
+        "Screenshot 2026-11-28 002737.png",
+        "Screenshot 2026-11-28 002752.png"
+    ],
+
+    badge: "Special Offer",
+    featured: true,
+    inStock: true
+},
+   
+   
+   
+   {
     id: "couple-locket-001",
     name: "Magnetic Broken Heart Couple Locket",
     category: "Gadgets",

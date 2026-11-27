@@ -4,6 +4,47 @@
 
 const VIP_PRODUCTS = [
 
+   // NIKE WATCH
+{
+    id: "watch-004",
+    name: "NIKE WATCH",
+    category: "Men Watches",
+    price: 1500,
+    oldPrice: 2499,
+
+    description: `OFFER OFFER
+
+NEW ARRIVAL AT ATIF WATCHES
+
+NIKE WATCH
+
+LIGHT WEIGHT
+
+ALUMINIUM AND FIBER MATERIAL
+
+BUTTERFLY LOCK
+
+NEW ATTRACTIVE COLOURS
+
+SPECIAL OFFER PRICE ONLY Rs. 1,500`,
+
+    images: [
+        "Screenshot 2026-11-28 004837.png",
+        "Screenshot 2026-11-28 004844.png",
+        "Screenshot 2026-11-28 004513.png",
+        "Screenshot 2026-11-28 004734.png",
+        "Screenshot 2026-11-28 004744.png",
+        "Screenshot 2026-11-28 004755.png",
+        "Screenshot 2026-11-28 004805.png",
+        "Screenshot 2026-11-28 004816.png",
+        "Screenshot 2026-11-28 004827.png"
+    ],
+
+    badge: "Special Offer",
+    featured: true,
+    inStock: true
+},
+
 
 // CUSTOMIZED WALLET & KEYCHAIN SET
 {
